@@ -3,6 +3,7 @@
   import MainContent from "./components/MainContent.vue";
   import MainNavBar from "./components/MainNavBar.vue";
   import FooterSection from "./components/FooterSection.vue";
+  import SignUpAndSocial from "./components/SignUpAndSocial.vue";
 
   export default {
     components: {
@@ -10,6 +11,7 @@
       MainContent,
       MainNavBar,
       FooterSection,
+      SignUpAndSocial,
     }
   }
 </script>
@@ -20,19 +22,10 @@
   <MainContent />
   <MainNavBar />
   <FooterSection />
+  <SignUpAndSocial />
 
 </template>
 
 <style lang="scss">
 @use "./styles/general.scss";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto Condensed', sans-serif;
-}
 </style>

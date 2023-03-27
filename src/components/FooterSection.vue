@@ -94,6 +94,11 @@
         font-size: 15px;
         font-weight: normal;
         color: gray;
+
+        &:hover {
+            color: white;
+            cursor: crosshair;
+        }
     }
 
     .img-wrapper {

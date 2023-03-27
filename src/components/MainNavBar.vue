@@ -69,6 +69,7 @@
 
         &:hover {
             color: gray;
+            cursor: crosshair;
         }
     }
 
