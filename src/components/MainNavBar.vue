@@ -23,7 +23,7 @@
                     },
                     {
                         name: "DC POWER VISA",
-                        img: "../src/assets/buy-comics-power-visa.png",
+                        img: "../src/assets/buy-dc-power-visa.png",
                     },
                 ]
             }
@@ -33,10 +33,13 @@
 </script>
 
 <template>
-    <div class="MainNavBar">
-        <ul>
-            <li class="mainNav" v-for="element in MainNav">{{ element.img }} {{ element.name }}</li>
-        </ul>
+    <div class="MainNavBar ">
+        <div class="container">
+            <ul class="wrapper">
+                <li class="mainNav" v-for="element in MainNav"> <img :src="element.img" class="img" alt=""> <div>{{ element.name }}</div> </li>
+            </ul>
+        </div>
+
     </div>
 
 
@@ -45,7 +48,12 @@
 <style scoped lang="scss">
     @use "../styles/partials/mixin.scss";
 
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
     .MainNavBar {
+
         width: 100%;
         height: 200px;
         background-color: #0282f9;
@@ -53,8 +61,22 @@
     .mainNav {
         @include mixin.page-margin;
         color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         line-height: 200px;
-        font-size: 20px;
+
+        &:hover {
+            color: gray;
+        }
     }
 
+    .img {
+        height: 60px;
+    }
+
+    .container {
+        width: 100vw;
+        margin: auto;
+    }
 </style>
