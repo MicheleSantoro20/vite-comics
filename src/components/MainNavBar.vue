@@ -50,7 +50,8 @@
 
     .wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        @include mixin.page-margin;
     }
     .MainNavBar {
 
@@ -59,10 +60,10 @@
         background-color: #0282f9;
     }
     .mainNav {
-        @include mixin.page-margin;
+        
         color: white;
         display: flex;
-        justify-content: center;
+
         align-items: center;
         line-height: 200px;
 
@@ -76,6 +77,7 @@
     }
 
     .container {
+
         width: 100vw;
         margin: auto;
     }

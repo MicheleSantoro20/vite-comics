@@ -10,17 +10,18 @@
                         NavElement: ["Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"]
                     },
                     {
+                        Name: "SHOP",
+                        NavElement: ["Shop DC", "Shop DC Collectibles"]
+                    },
+                    {
                         Name: "DC",
                         NavElement: ["Terms of Use", "Privacy Policy (New)", "Ad Choiches", "Advertising", "jobs", "Subscriptions", "Talent Workshops", "CPSC", "Ratings", "Shop Help", "Contact Is"]
                     },
                     {
-                        Name: "sites",
+                        Name: "SITES",
                         NavElement: ["DC", "MAD Magazine", "DC Kid", "DC Universe", "DC Power Visa"]
                     },
-                    {
-                        Name: "Shop",
-                        NavElement: ["Shop DC", "Shop DC Collectibles"]
-                    },
+
                 ]
             }
         }
@@ -32,7 +33,7 @@
     <footer>
         <div class="wrapper">
             <div class="FooterList">
-                <ul v-for="element in FooterNav"> 
+                <ul  class="Nav" v-for="element in FooterNav"> 
 
                     <li class="ListName">
                         {{element.Name}}
@@ -42,8 +43,8 @@
                     </li>
                 </ul>
             </div>
-            <div>
-                <img src="../assets/dc-logo-bg.png" alt="">
+            <div class="img-wrapper">
+                <img src="../assets/dc-logo-bg.png" class="dc-img" alt="">
             </div>
         </div>
     </footer>
@@ -56,10 +57,11 @@
     .wrapper {
         @include mixin.page-margin;
         display: flex;
+        height: 350px;
     }
 
     footer {
-        height: 400px;
+        height: 350px;
         background-image: url(../assets/footer-bg.jpg);
     }
     li {
@@ -68,13 +70,17 @@
     }
     .FooterList {
         display: flex;
-        width: 50%;
+        width: 35%;
+        height: 350px;
         flex-wrap: wrap;
+        flex-direction: column;
+        padding-top: 20px;
     }
 
-    ul {
-        width: calc(100% /3);
-        height: 0px;
+    .Nav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .ListName {
@@ -87,6 +93,15 @@
     .ListItem {
         font-size: 15px;
         font-weight: normal;
-        color: lightgray;
+        color: gray;
+    }
+
+    .img-wrapper {
+        margin-left: 300px;
+        overflow-y: hidden;
+    }
+
+    .dc-img {
+        transform: translatey(-20%);
     }
 </style>
