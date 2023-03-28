@@ -23,7 +23,7 @@
                     },
                     {
                         name: "DC POWER VISA",
-                        img: "../src/assets/buy-dc-power-visa.png",
+                        img: "../src/assets/buy-dc-power-visa.svg",
                     },
                 ]
             }
@@ -70,6 +70,10 @@
         &:hover {
             color: gray;
             cursor: crosshair;
+        }
+
+        &:last-child img {
+            height: 40px;
         }
     }
 
