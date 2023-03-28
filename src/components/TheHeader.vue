@@ -14,7 +14,7 @@ export default {
 
 <template>
     <header class="header">
-        <div><img src="../assets/dc-logo.png" alt=""></div>
+        <div class="logoimg"><img src="../assets/dc-logo.png" alt=""></div>
         <ul>
             <li class="header-navbar" v-for="(element) in navbar" href="#"> {{ element }}</li>
         </ul>
@@ -47,5 +47,19 @@ export default {
         @include mixin.page-margin;
         padding: 15px 0px;
         
+    }
+
+    .logoimg:hover {
+        animation: rotate 0.1s infinite;
+    }
+
+
+    @keyframes rotate {
+        0% {
+            transform: rotate3d(0, 0, 1, 0deg);
+        }
+        100% {
+            transform: rotate3d(0, 0, 1, 360deg);
+        }
     }
 </style>
