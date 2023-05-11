@@ -43,7 +43,7 @@
         text-align: center;
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap ;
 
 
 

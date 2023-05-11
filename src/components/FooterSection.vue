@@ -21,7 +21,6 @@
                         Name: "SITES",
                         NavElement: ["DC", "MAD Magazine", "DC Kid", "DC Universe", "DC Power Visa"]
                     },
-
                 ]
             }
         }
